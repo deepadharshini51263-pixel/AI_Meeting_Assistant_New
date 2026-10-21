@@ -2,3 +2,7 @@ Flask
 requests
 moviepy
 gunicorn
+groq
+python-dotenv
+faster-whisper
+pyannote.audio
