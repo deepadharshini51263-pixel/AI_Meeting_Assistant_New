@@ -1,0 +1,595 @@
+/* =========================================
+   AI MEETING ASSISTANT
+   Responsive Purple + Pink Theme
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #24103f 0%,
+            #11152d 35%,
+            #080b1a 75%,
+            #050610 100%
+        );
+
+    color: #f8f7ff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.container {
+    max-width: 1100px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.main-card {
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25, 22, 50, 0.97),
+            rgba(13, 15, 32, 0.98)
+        );
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(139, 92, 246, 0.10);
+
+    padding: 35px !important;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h1 {
+    color: #ffffff;
+
+    font-size: 3rem;
+
+    font-weight: 800;
+
+    text-shadow:
+        0 0 25px rgba(168, 85, 247, 0.25);
+}
+
+h4 {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.text-muted {
+    color: #aaa8c5 !important;
+}
+
+
+/* =========================================
+   RECORDING BUTTONS
+========================================= */
+
+#startBtn,
+#stopBtn {
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 13px 28px;
+
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+
+#startBtn {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #a855f7
+        );
+
+    box-shadow:
+        0 8px 25px rgba(139, 92, 246, 0.30);
+}
+
+
+#startBtn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 35px rgba(139, 92, 246, 0.45);
+}
+
+
+#stopBtn {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e11d48,
+            #ec4899
+        );
+}
+
+
+#stopBtn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(236, 72, 153, 0.30);
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+#status {
+    color: #d8b4fe !important;
+
+    font-weight: 600;
+
+    padding: 12px;
+
+    border-radius: 14px;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+
+/* =========================================
+   AUDIO
+========================================= */
+
+audio {
+    width: 100%;
+
+    border-radius: 14px;
+
+    background: #15152b;
+}
+
+
+/* =========================================
+   DOWNLOAD
+========================================= */
+
+#downloadBtn {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+
+    background: #7c3aed;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+#downloadBtn:hover {
+    background: #9333ea;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   VIDEO UPLOAD
+========================================= */
+
+#videoInput {
+    color: #eeeeff;
+
+    background: #17152d;
+
+    border: 1px solid rgba(168, 85, 247, 0.30);
+
+    border-radius: 12px;
+
+    padding: 12px;
+}
+
+
+#uploadVideoBtn {
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 13px 28px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6366f1,
+            #8b5cf6
+        );
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+#uploadVideoBtn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+
+/* =========================================
+   TRANSCRIPT
+========================================= */
+
+#transcriptBox {
+    min-height: 160px;
+
+    max-height: 350px;
+
+    padding: 20px;
+
+    border-radius: 16px !important;
+
+    border: 1px solid rgba(139, 92, 246, 0.20) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17152d,
+            #101124
+        ) !important;
+
+    color: #eeeaff;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+
+    overflow-y: auto;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   GENERATE BUTTON
+========================================= */
+
+#generateBtn {
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 14px 32px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #ec4899
+        );
+
+    box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+
+#generateBtn:hover:not(:disabled) {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 40px rgba(236, 72, 153, 0.35);
+}
+
+
+#generateBtn:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   MINUTES
+========================================= */
+
+#minutesBox {
+    min-height: 200px;
+
+    max-height: 500px;
+
+    padding: 22px;
+
+    border-radius: 16px !important;
+
+    border: 1px solid rgba(236, 72, 153, 0.20) !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            #17152d,
+            #101124
+        ) !important;
+
+    color: #f4efff;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+
+    overflow-y: auto;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   SHARE BUTTONS
+========================================= */
+
+#shareSection button {
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    padding: 10px 20px;
+}
+
+
+#copyBtn {
+    background: #4b5563;
+
+    border: none;
+
+    color: white;
+}
+
+
+#shareBtn {
+    background: #ec4899;
+
+    border: none;
+
+    color: white;
+}
+
+
+/* =========================================
+   HORIZONTAL LINE
+========================================= */
+
+hr {
+    border-color: rgba(168, 85, 247, 0.18);
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 0;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .py-5 {
+        padding-top: 25px !important;
+        padding-bottom: 25px !important;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .main-card {
+        padding: 22px !important;
+
+        border-radius: 22px;
+    }
+
+    #startBtn,
+    #stopBtn,
+    #generateBtn,
+    #uploadVideoBtn {
+        width: 100%;
+
+        margin: 5px 0 !important;
+    }
+
+    #downloadBtn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    #transcriptBox {
+        min-height: 140px;
+
+        max-height: 300px;
+    }
+
+    #minutesBox {
+        min-height: 180px;
+
+        max-height: 400px;
+    }
+
+    #shareSection {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    #shareSection button {
+        width: 100%;
+
+        margin: 0 !important;
+    }
+}
+
+
+/* =========================================
+   MOBILE PHONE
+========================================= */
+
+@media (max-width: 576px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+
+        line-height: 1.2;
+    }
+
+    h4 {
+        font-size: 1.15rem;
+    }
+
+    .main-card {
+        padding: 18px !important;
+
+        border-radius: 18px;
+    }
+
+    .text-muted {
+        font-size: 13px;
+    }
+
+    #status {
+        font-size: 13px;
+
+        padding: 10px;
+    }
+
+    #transcriptBox {
+        min-height: 130px;
+
+        max-height: 250px;
+
+        padding: 15px;
+
+        font-size: 14px;
+    }
+
+    #minutesBox {
+        min-height: 160px;
+
+        max-height: 350px;
+
+        padding: 15px;
+
+        font-size: 14px;
+    }
+
+    #videoInput {
+        font-size: 13px;
+
+        padding: 10px;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+    .my-5 {
+        margin-top: 2rem !important;
+
+        margin-bottom: 2rem !important;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 1.65rem;
+    }
+
+    .main-card {
+        padding: 14px !important;
+    }
+
+    #startBtn,
+    #stopBtn,
+    #generateBtn,
+    #uploadVideoBtn {
+        font-size: 14px;
+
+        padding: 12px;
+    }
+
+    #transcriptBox,
+    #minutesBox {
+        font-size: 13px;
+    }
+}
